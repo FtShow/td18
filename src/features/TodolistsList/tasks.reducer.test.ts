@@ -109,7 +109,7 @@ test("correct task should be added to correct array", () => {
             startDate: "",
             id: "id exists",
         },
-    }, 'requestId', {todolistId: "todolistId2", title: "juce"});
+    }, 'requestId', {todolistId: "todolistId2", title: "juce2"});
 
     const endState = tasksReducer(startState, action);
 

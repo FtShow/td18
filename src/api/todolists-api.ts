@@ -36,7 +36,7 @@ export const todolistsAPI = {
     return instance.delete<ResponseType>(`todo-lists/${todolistId}/tasks/${taskId}`);
   },
   createTask(arg: createTask) {
-    return instance.post<ResponseType<{ item: TaskType }>>(`todo-lists/${arg.todolistId}/tasks`, { title: arg.taskTitile });
+    return instance.post<ResponseType<{ item: TaskType }>>(`todo-lists/${arg.todolistId}/tasks`, { title: arg.title });
   },
   updateTask(todolistId: string, taskId: string, model: UpdateTaskModelType) {
     return instance.put<ResponseType<TaskType>>(`todo-lists/${todolistId}/tasks/${taskId}`, model);
@@ -51,7 +51,7 @@ export type LoginParamsType = {
 };
 export type createTask = {
   todolistId: string,
-  taskTitile: string
+  title: string
 }
 
 export const authAPI = {
